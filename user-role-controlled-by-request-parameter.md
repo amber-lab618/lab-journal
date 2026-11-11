@@ -4,22 +4,22 @@
 
 
 #### Tujuan:
-- mengakses admin panel dengan menggunakan akun wiener:peter
+- mengakses admin panel dengan menggunakan akun `wiener:peter`
 - menghapus akun carlos
 
 
 #### Langkah-langkah
 - buka burpsuite -> open browser -> salin dan tempel alamat labnya
-- klik My account lalu aktifkan intercept di burpsuite
-- masukkan username wiener dan password peter lalu login
-- pada bagian response intercept ubah Admin=false menjadi Admin=true lalu forward
-- setelah itu di browser akan muncul admin panel, klik admin panel dan di intercept akan muncul respon GET /admin lalu forward
-- matikan intercept lalu cari di http history request /admin dan send to repeater
-- di tab repeater ubah Admin=false menjadi Admin=true lalu send
-- setelah itu klik kanan di kolom request dan pilih request in browser > in original session, salin url lalu tempel di browser
-- klik admin panel dan akan muncul nama user dan tombol delete, klik delete pada akun carlos
-- kembali ke burpsuite, cari di http history request /admin/delete?username=carlos lalu send to repeater
-- di tab repeater ubah Admin=false menjadi Admin=true lalu send
+- klik `My account` lalu aktifkan intercept di burpsuite
+- masukkan `username:wiener` dan `password:peter` lalu login
+- pada bagian response intercept ubah `Admin=false` menjadi `Admin=true` lalu forward
+- setelah itu di browser akan muncul admin panel, klik `admin panel` dan di intercept akan muncul respon `GET /admin` lalu forward
+- matikan intercept lalu cari di http history request `/admin` dan send to repeater
+- di tab repeater ubah `Admin=false` menjadi `Admin=true` lalu send
+- setelah itu klik kanan di kolom request dan pilih `request in browser > in original session`, salin url lalu tempel di browser
+- klik admin panel dan akan muncul nama user dan tombol delete, klik `delete` pada akun carlos
+- kembali ke burpsuite, cari di http history request `/admin/delete?username=carlos` lalu send to repeater
+- di tab repeater ubah `Admin=false` menjadi `Admin=true` lalu send
 - request berhasil dan akun carlos berhasil dihapus
 
 
